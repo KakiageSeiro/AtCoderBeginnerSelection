@@ -1,13 +1,17 @@
 package main
 
 import (
-"fmt"
+	"fmt"
 )
+
+// ###
+// https://atcoder.jp/contests/abs/tasks/practice_1
+// ###
 
 func main() {
 	var a, b, c int
 	var s string
-	// 標準入力からの入力待ち
+
 	fmt.Scanf("%d", &a)
 	fmt.Scanf("%d %d", &b, &c)
 	fmt.Scanf("%s", &s)
