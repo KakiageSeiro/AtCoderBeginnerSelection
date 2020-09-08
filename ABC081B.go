@@ -12,10 +12,15 @@ import (
 // https://atcoder.jp/contests/abs/tasks/abc081_b
 // ###
 
-var sc = bufio.NewScanner(os.Stdin)
+// 標準入力から一行読み取る
+func nextLine_abc081_b() string {
+	var sc = bufio.NewScanner(os.Stdin)
+	sc.Scan()
+	return sc.Text()
+}
 
 func main() {
-	n, a := nextLine(), nextLine()
+	n, a := nextLine_abc081_b(), nextLine_abc081_b()
 
 	intSlice := createIntSlice(a, n)
 
@@ -23,11 +28,6 @@ func main() {
 	divisionCount, _ := division(intSlice, 0)
 
 	fmt.Printf("%d", divisionCount)
-}
-
-func nextLine() string {
-	sc.Scan()
-	return sc.Text()
 }
 
 func createIntSlice(a string, n string) []int {
