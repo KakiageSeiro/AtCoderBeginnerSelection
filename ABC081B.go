@@ -17,10 +17,10 @@ var sc = bufio.NewScanner(os.Stdin)
 func main() {
 	n, a := nextLine(), nextLine()
 
-	intslice := createIntSlice(a, n)
+	intSlice := createIntSlice(a, n)
 
 	// 割り算を実行した回数
-	divisionCount, _ := division(intslice, 0) 
+	divisionCount, _ := division(intSlice, 0)
 
 	fmt.Printf("%d", divisionCount)
 }
@@ -31,21 +31,21 @@ func nextLine() string {
 }
 
 func createIntSlice(a string, n string) []int {
-	var intslice []int
+	var intSlice []int
 	for _, s := range strings.Split(a, " ") {
 		atoi, err := strconv.Atoi(s)
 		if err != nil {
 			panic("Aに整数以外の値が入力されました")
 		}
 
-		intslice = append(intslice, atoi)
+		intSlice = append(intSlice, atoi)
 	}
 
 	atoi, _ := strconv.Atoi(n)
-	if atoi != len(intslice) {
+	if atoi != len(intSlice) {
 		panic("Nの値と、Aの個数が違います")
 	}
-	return intslice
+	return intSlice
 }
 
 func division(intSlice []int, divisionCount int) (int, []int) {
