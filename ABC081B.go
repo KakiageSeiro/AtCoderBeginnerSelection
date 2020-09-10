@@ -12,7 +12,6 @@ import (
 // https://atcoder.jp/contests/abs/tasks/abc081_b
 // ###
 
-var sc = bufio.NewScanner(os.Stdin)
 
 func main() {
 	n, a := nextLine(), nextLine()
@@ -26,6 +25,7 @@ func main() {
 }
 
 func nextLine() string {
+	var sc = bufio.NewScanner(os.Stdin)
 	sc.Scan()
 	return sc.Text()
 }
