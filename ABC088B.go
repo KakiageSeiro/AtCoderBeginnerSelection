@@ -20,6 +20,7 @@ func main() {
 
 	aSlice := readA(nInt, sc)
 	// 数字が大きい順(降順)に並び替え
+	// https://text.baldanders.info/golang/sort/
 	sort.Sort(sort.Reverse(sort.IntSlice(aSlice)))
 
 	// アリス、ボブの順で大きい数字を取っていく
